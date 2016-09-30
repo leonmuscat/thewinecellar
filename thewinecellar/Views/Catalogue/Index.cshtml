@@ -1,0 +1,17 @@
+﻿
+
+@foreach (var product in ViewBag.ProductList)
+{
+    <div class="product_box">
+        <a href="productdetail_1.html"><img src="images/product/01.jpg" alt="Image 01" /></a>
+        <h3>@product.name</h3>
+        <h3>@product.info</h3>
+        <p class="product_price">@product.info</p>
+        <a href="shoppingcart.html" class="add_to_cart">BUY IT NOW!</a>
+        <a href="productdetail_1.html" class="detail">DETAIL</a>
+    </div>
+}
+
+
+
+

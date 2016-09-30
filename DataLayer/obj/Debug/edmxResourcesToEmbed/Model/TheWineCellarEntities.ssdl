@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TheWineCellarsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="platform_user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="surname" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="shipping_address" Type="varchar" MaxLength="100" />
+    <Property Name="city" Type="varchar" MaxLength="25" />
+    <Property Name="zip" Type="varchar" MaxLength="10" />
+    <Property Name="phone" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" Nullable="false" />
+    <Property Name="product_group_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="info" Type="varchar" MaxLength="150" />
+    <Property Name="pic" Type="image" />
+    <Property Name="price" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="product_group">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="transaction">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" Nullable="false" />
+    <Property Name="platform_user_id" Type="bigint" />
+    <Property Name="date" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="transaction_product">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" Nullable="false" />
+    <Property Name="product_id" Type="bigint" Nullable="false" />
+    <Property Name="transaction_id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_platform_user_id">
+    <End Role="platform_user" Type="Self.platform_user" Multiplicity="0..1" />
+    <End Role="transaction" Type="Self.transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="platform_user">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="transaction">
+        <PropertyRef Name="platform_user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_product_id">
+    <End Role="product" Type="Self.product" Multiplicity="1" />
+    <End Role="transaction_product" Type="Self.transaction_product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="transaction_product">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_product_product_group">
+    <End Role="product_group" Type="Self.product_group" Multiplicity="1" />
+    <End Role="product" Type="Self.product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product_group">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="product">
+        <PropertyRef Name="product_group_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_transaction_id">
+    <End Role="transaction" Type="Self.transaction" Multiplicity="1" />
+    <End Role="transaction_product" Type="Self.transaction_product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="transaction">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="transaction_product">
+        <PropertyRef Name="transaction_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TheWineCellarsModelStoreContainer">
+    <EntitySet Name="platform_user" EntityType="Self.platform_user" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="product" EntityType="Self.product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="product_group" EntityType="Self.product_group" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="transaction" EntityType="Self.transaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="transaction_product" EntityType="Self.transaction_product" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_platform_user_id" Association="Self.FK_platform_user_id">
+      <End Role="platform_user" EntitySet="platform_user" />
+      <End Role="transaction" EntitySet="transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_product_id" Association="Self.FK_product_id">
+      <End Role="product" EntitySet="product" />
+      <End Role="transaction_product" EntitySet="transaction_product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_product_product_group" Association="Self.FK_product_product_group">
+      <End Role="product_group" EntitySet="product_group" />
+      <End Role="product" EntitySet="product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_transaction_id" Association="Self.FK_transaction_id">
+      <End Role="transaction" EntitySet="transaction" />
+      <End Role="transaction_product" EntitySet="transaction_product" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

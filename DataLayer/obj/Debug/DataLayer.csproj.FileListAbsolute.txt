@@ -1,0 +1,14 @@
+C:\Users\XPS\Desktop\HND\BSc (Hons) Computing (Top-Up) (v2) - ARU\Module 5 Online Business Solutions\Project\NovaCosmeticsOK\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\XPS\Desktop\HND\BSc (Hons) Computing (Top-Up) (v2) - ARU\Module 5 Online Business Solutions\Project\NovaCosmeticsOK\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\XPS\Desktop\HND\BSc (Hons) Computing (Top-Up) (v2) - ARU\Module 5 Online Business Solutions\Project\NovaCosmeticsOK\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\XPS\Desktop\HND\BSc (Hons) Computing (Top-Up) (v2) - ARU\Module 5 Online Business Solutions\Project\NovaCosmeticsOK\DataLayer\obj\Debug\DataLayer.pdb
+C:\theWineCellar\theWineCellar\DataLayer\bin\Debug\DataLayer.dll
+C:\theWineCellar\theWineCellar\DataLayer\bin\Debug\DataLayer.pdb
+C:\theWineCellar\theWineCellar\DataLayer\obj\Debug\DataLayer.dll
+C:\theWineCellar\theWineCellar\DataLayer\obj\Debug\DataLayer.pdb
+C:\theWineCellar\theWineCellar\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\theWineCellar\theWineCellar\DataLayer\bin\Debug\DataLayer.dll.config
+C:\theWineCellar\theWineCellar\DataLayer\bin\Debug\EntityFramework.dll
+C:\theWineCellar\theWineCellar\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\theWineCellar\theWineCellar\DataLayer\bin\Debug\EntityFramework.xml
+C:\theWineCellar\theWineCellar\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
