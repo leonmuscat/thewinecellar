@@ -16,9 +16,8 @@ using System.Data;
 namespace theWineCellar.Controllers
 {
     [Authorize]
-    public class AccountController : Controller
+    public class AccountController : AbstractController
     {
-        DataConnector connector = new DataConnector("Server=XPS-PC\\SQLEXPRESS;Database=NovaCosmetics;User Id=sa;Password=LeonLFC71986;");
 
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
@@ -149,6 +148,11 @@ namespace theWineCellar.Controllers
         {
             if (ModelState.IsValid)
             {
+                platform_user platformUser = new platform_user(model.Name, model.Surname, model.Email, 
+                    model.Password, model.Shipping_Address, model.City, model.Zip, model.Phone);
+
+                connector.registerUser(platformUser);
+
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)

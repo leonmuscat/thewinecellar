@@ -7,27 +7,19 @@ using DataLayer.Model;
 
 namespace theWineCellar.Controllers
 {
-    public class CatalogueController : Controller
+    public class CatalogueController : AbstractController
     {
+         
+
         // GET: Catalogue
         public ActionResult Index()
         {
-            List<product> productList = new List<product>();
-
-            product product1 = new product();
-            product1.name = "Inbid";
-            product1.price = 70;
-            product1.info = "Ahmar";
-
-            product product2 = new product();
-            product2.name = "Champagne";
-            product2.price = 80;
-            product2.info = "Ifexfex";
-
-            productList.Add(product1);
-            productList.Add(product2);
+            var productList = connector.getCatalogue(imageFormat);
+            //string test = Convert.ToString(productList.ElementAt(0));
+            //productList.ElementAt(0).pic = VirtualPathUtility.ToAbsolute(test);
 
             ViewBag.ProductList = productList;
+
             return View();
         }
 

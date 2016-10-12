@@ -12,3 +12,8 @@ C:\theWineCellar\theWineCellar\DataLayer\bin\Debug\EntityFramework.dll
 C:\theWineCellar\theWineCellar\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
 C:\theWineCellar\theWineCellar\DataLayer\bin\Debug\EntityFramework.xml
 C:\theWineCellar\theWineCellar\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\XPS\Documents\Visual Studio 2015\Projects\theWineCellar\DataLayer\bin\Debug\DataLayer.dll.config
+C:\Users\XPS\Documents\Visual Studio 2015\Projects\theWineCellar\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\XPS\Documents\Visual Studio 2015\Projects\theWineCellar\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\XPS\Documents\Visual Studio 2015\Projects\theWineCellar\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\XPS\Documents\Visual Studio 2015\Projects\theWineCellar\DataLayer\obj\Debug\DataLayer.pdb

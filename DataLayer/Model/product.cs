@@ -24,8 +24,8 @@ namespace DataLayer.Model
         public int product_group_id { get; set; }
         public string name { get; set; }
         public string info { get; set; }
-        public byte[] pic { get; set; }
         public decimal price { get; set; }
+        public string pic { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<transaction_product> transaction_product { get; set; }

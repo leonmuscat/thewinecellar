@@ -15,14 +15,14 @@ namespace theWineCellar.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Time You get to know what The Wine Cellar is all About...";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Hit the right location with just one Click!.";
 
             return View();
         }

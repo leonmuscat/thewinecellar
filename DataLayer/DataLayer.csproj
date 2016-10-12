@@ -53,67 +53,65 @@
   <ItemGroup>
     <Compile Include="DataConnector.cs" />
     <Compile Include="Model\platform_user.cs">
-      <DependentUpon>TheWineCellarEntities.tt</DependentUpon>
+      <DependentUpon>theWineCellar.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\product.cs">
-      <DependentUpon>TheWineCellarEntities.tt</DependentUpon>
+      <DependentUpon>theWineCellar.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\product_group.cs">
-      <DependentUpon>TheWineCellarEntities.tt</DependentUpon>
+      <DependentUpon>theWineCellar.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\sysdiagram.cs">
-      <DependentUpon>TheWineCellarEntities.tt</DependentUpon>
+      <DependentUpon>theWineCellar.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\TheWineCellarEntities.Context.cs">
+    <Compile Include="Model\theWineCellar.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TheWineCellarEntities.Context.tt</DependentUpon>
+      <DependentUpon>theWineCellar.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\TheWineCellarEntities.cs">
+    <Compile Include="Model\theWineCellar.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TheWineCellarEntities.tt</DependentUpon>
+      <DependentUpon>theWineCellar.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\TheWineCellarEntities.Designer.cs">
+    <Compile Include="Model\theWineCellar.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TheWineCellarEntities.edmx</DependentUpon>
+      <DependentUpon>theWineCellar.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\transaction.cs">
-      <DependentUpon>TheWineCellarEntities.tt</DependentUpon>
+      <DependentUpon>theWineCellar.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\transaction_product.cs">
-      <DependentUpon>TheWineCellarEntities.tt</DependentUpon>
+      <DependentUpon>theWineCellar.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Model\TheWineCellarEntities.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TheWineCellarEntities.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.Config" />
-    <None Include="Model\TheWineCellarEntities.edmx.diagram">
-      <DependentUpon>TheWineCellarEntities.edmx</DependentUpon>
+    <EntityDeploy Include="Model\theWineCellar.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>theWineCellar.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\theWineCellar.edmx.diagram">
+      <DependentUpon>theWineCellar.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\TheWineCellarEntities.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TheWineCellarEntities.edmx</DependentUpon>
-      <LastGenOutput>TheWineCellarEntities.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model\TheWineCellarEntities.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TheWineCellarEntities.edmx</DependentUpon>
-      <LastGenOutput>TheWineCellarEntities.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="Model\theWineCellar.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>theWineCellar.edmx</DependentUpon>
+      <LastGenOutput>theWineCellar.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\theWineCellar.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>theWineCellar.edmx</DependentUpon>
+      <LastGenOutput>theWineCellar.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

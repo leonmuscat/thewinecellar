@@ -195,6 +195,7 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AbstractController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CatalogueController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -216,6 +217,14 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="images\1.jpg" />
+    <Content Include="images\anterra.jpeg" />
+    <Content Include="images\arrowhead_pinot_noir.jpeg" />
+    <Content Include="images\barkan_web.jpeg" />
+    <Content Include="images\bevi_web.jpeg" />
+    <Content Include="images\canchales.jpeg" />
+    <Content Include="images\cantina_web.jpeg" />
+    <Content Include="images\domaine_bersan.jpeg" />
+    <Content Include="images\laxas_web.jpeg" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -275,6 +284,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Abstract\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
