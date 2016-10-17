@@ -53,48 +53,48 @@
   <ItemGroup>
     <Compile Include="DataConnector.cs" />
     <Compile Include="Model\platform_user.cs">
-      <DependentUpon>theWineCellar.tt</DependentUpon>
+      <DependentUpon>TheWineCellar.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\product.cs">
-      <DependentUpon>theWineCellar.tt</DependentUpon>
+      <DependentUpon>TheWineCellar.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\product_group.cs">
-      <DependentUpon>theWineCellar.tt</DependentUpon>
+      <DependentUpon>TheWineCellar.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\sysdiagram.cs">
-      <DependentUpon>theWineCellar.tt</DependentUpon>
+      <DependentUpon>TheWineCellar.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\theWineCellar.Context.cs">
+    <Compile Include="Model\TheWineCellar.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>theWineCellar.Context.tt</DependentUpon>
+      <DependentUpon>TheWineCellar.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\theWineCellar.cs">
+    <Compile Include="Model\TheWineCellar.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>theWineCellar.tt</DependentUpon>
+      <DependentUpon>TheWineCellar.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\theWineCellar.Designer.cs">
+    <Compile Include="Model\TheWineCellar.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>theWineCellar.edmx</DependentUpon>
+      <DependentUpon>TheWineCellar.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\transaction.cs">
-      <DependentUpon>theWineCellar.tt</DependentUpon>
+      <DependentUpon>TheWineCellar.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\transaction_product.cs">
-      <DependentUpon>theWineCellar.tt</DependentUpon>
+      <DependentUpon>TheWineCellar.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <EntityDeploy Include="Model\theWineCellar.edmx">
+    <EntityDeploy Include="Model\TheWineCellar.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>theWineCellar.Designer.cs</LastGenOutput>
+      <LastGenOutput>TheWineCellar.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\theWineCellar.edmx.diagram">
-      <DependentUpon>theWineCellar.edmx</DependentUpon>
+    <None Include="Model\TheWineCellar.edmx.diagram">
+      <DependentUpon>TheWineCellar.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -102,15 +102,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\theWineCellar.Context.tt">
+    <Content Include="Model\TheWineCellar.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>theWineCellar.edmx</DependentUpon>
-      <LastGenOutput>theWineCellar.Context.cs</LastGenOutput>
+      <DependentUpon>TheWineCellar.edmx</DependentUpon>
+      <LastGenOutput>TheWineCellar.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model\theWineCellar.tt">
+    <Content Include="Model\TheWineCellar.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>theWineCellar.edmx</DependentUpon>
-      <LastGenOutput>theWineCellar.cs</LastGenOutput>
+      <DependentUpon>TheWineCellar.edmx</DependentUpon>
+      <LastGenOutput>TheWineCellar.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

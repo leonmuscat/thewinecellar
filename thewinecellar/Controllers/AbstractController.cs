@@ -10,6 +10,6 @@ namespace theWineCellar.Controllers
     public class AbstractController : Controller
     {
         protected string imageFormat = ".jpeg";
-        protected DataConnector connector = new DataConnector("Server=XPS-PC\\SQLEXPRESS;Database=NovaCosmetics;User Id=sa;Password=LeonLFC71986;");
+        protected DataConnector connector = new DataConnector("Server=XPS-PC\\SQLEXPRESS;Database=TheWineCellar;User Id=sa;Password=LeonLFC71986;");
     }
 }

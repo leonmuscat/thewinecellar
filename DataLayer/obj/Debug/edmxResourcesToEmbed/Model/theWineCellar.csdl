@@ -4,22 +4,22 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int64" Nullable="false" />
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="name" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="surname" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="shipping_address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="city" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="zip" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="phone" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
-    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="transactions" Relationship="Self.FK_platform_user_id" FromRole="platform_user" ToRole="transaction" />
   </EntityType>
   <EntityType Name="product">
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int64" Nullable="false" />
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="product_group_id" Type="Int32" Nullable="false" />
     <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="info" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
@@ -32,7 +32,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="products" Relationship="Self.FK_product_product_group" FromRole="product_group" ToRole="product" />
   </EntityType>
@@ -50,7 +50,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int64" Nullable="false" />
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="platform_user_id" Type="Int64" />
     <Property Name="date" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
     <NavigationProperty Name="platform_user" Relationship="Self.FK_platform_user_id" FromRole="transaction" ToRole="platform_user" />
@@ -60,7 +60,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int64" Nullable="false" />
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="product_id" Type="Int64" Nullable="false" />
     <Property Name="transaction_id" Type="Int64" Nullable="false" />
     <NavigationProperty Name="product" Relationship="Self.FK_product_id" FromRole="transaction_product" ToRole="product" />
@@ -114,7 +114,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="theWineCellarEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="TheWineCellarEntityModel" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="platform_user" EntityType="Self.platform_user" />
     <EntitySet Name="products" EntityType="Self.product" />
     <EntitySet Name="product_group" EntityType="Self.product_group" />

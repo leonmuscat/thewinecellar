@@ -4,21 +4,21 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="bigint" Nullable="false" />
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="varchar" MaxLength="25" Nullable="false" />
     <Property Name="surname" Type="varchar" MaxLength="25" Nullable="false" />
     <Property Name="shipping_address" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="city" Type="varchar" MaxLength="25" />
+    <Property Name="city" Type="varchar" MaxLength="25" Nullable="false" />
     <Property Name="zip" Type="varchar" MaxLength="10" />
     <Property Name="phone" Type="varchar" MaxLength="25" />
-    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="25" Nullable="false" />
   </EntityType>
   <EntityType Name="product">
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="bigint" Nullable="false" />
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="product_group_id" Type="int" Nullable="false" />
     <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="info" Type="varchar" MaxLength="150" />
@@ -29,7 +29,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="sysdiagrams">
@@ -46,7 +46,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="bigint" Nullable="false" />
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="platform_user_id" Type="bigint" />
     <Property Name="date" Type="timestamp" StoreGeneratedPattern="Computed" />
   </EntityType>
@@ -54,7 +54,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="bigint" Nullable="false" />
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="product_id" Type="bigint" Nullable="false" />
     <Property Name="transaction_id" Type="bigint" Nullable="false" />
   </EntityType>

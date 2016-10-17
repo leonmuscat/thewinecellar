@@ -13,10 +13,10 @@ namespace DataLayer.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class theWineCellarEntities : DbContext
+    public partial class TheWineCellarEntityModel : DbContext
     {
-        public theWineCellarEntities()
-            : base("name=theWineCellarEntities")
+        public TheWineCellarEntityModel()
+            : base("name=TheWineCellarEntityModel")
         {
         }
     

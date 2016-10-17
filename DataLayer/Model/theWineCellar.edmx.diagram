@@ -4,13 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0c285952a74246328abb35e85ecf54f9" Name="Diagram1">
+      <Diagram DiagramId="0db259b3ee9542af84919b2e95e3f18f" Name="Diagram1">
         <EntityTypeShape EntityType="TheWineCellarModel.platform_user" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TheWineCellarModel.product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="TheWineCellarModel.product_group" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="TheWineCellarModel.sysdiagram" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TheWineCellarModel.transaction" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="TheWineCellarModel.transaction_product" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TheWineCellarModel.transaction_product" Width="2.875" PointX="5.5" PointY="1.25" IsExpanded="true" />
         <AssociationConnector Association="TheWineCellarModel.FK_platform_user_id" ManuallyRouted="false" />
         <AssociationConnector Association="TheWineCellarModel.FK_product_id" ManuallyRouted="false" />
         <AssociationConnector Association="TheWineCellarModel.FK_product_product_group" ManuallyRouted="false" />

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="TheWineCellarModelStoreContainer" CdmEntityContainer="theWineCellarEntities">
+  <EntityContainerMapping StorageEntityContainer="TheWineCellarModelStoreContainer" CdmEntityContainer="TheWineCellarEntityModel">
     <EntitySetMapping Name="platform_user">
       <EntityTypeMapping TypeName="TheWineCellarModel.platform_user">
         <MappingFragment StoreEntitySet="platform_user">
