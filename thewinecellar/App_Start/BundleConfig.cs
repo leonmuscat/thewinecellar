@@ -24,8 +24,8 @@ namespace theWineCellar
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/cart").Include(
-                      "~/Scripts/cart.js"));
+            //bundles.Add(new ScriptBundle("~/bundles/cart").Include(
+            //          "~/Scripts/cart.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",

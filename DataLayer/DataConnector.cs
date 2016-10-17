@@ -57,6 +57,37 @@ namespace DataLayer
             return platformUser;
         }
 
+        public platform_user getPlatformUserByEmail(string email)
+        {
+            platform_user platformUser = new platform_user();
+            connection.Open();
+            SqlCommand queryPlatformUser = new SqlCommand(String.Format("SELECT * FROM platform_user WHERE email='{0}'", email), connection);
+            try
+            {
+                using (SqlDataReader reader = queryPlatformUser.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        platformUser.id = Convert.ToInt64(reader["id"]);
+                        platformUser.name = Convert.ToString(reader["name"]);
+                        platformUser.surname = Convert.ToString(reader["surname"]);
+                        platformUser.email = Convert.ToString(reader["email"]);
+                    }
+                }
+            }
+
+            catch (Exception e)
+            {
+                errorMessage = e.Message;
+            }
+            finally
+            {
+                dataAdapter.SelectCommand.Connection.Close();
+            }
+
+            return platformUser;
+        }
+
         public List<product> getCatalogue(string formatname)
         {
             List<product> productList = new List<product>();
