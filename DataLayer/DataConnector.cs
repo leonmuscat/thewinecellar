@@ -71,6 +71,7 @@ namespace DataLayer
                     while (reader.Read())
                     {
                         product product = new product();
+                        product.id = Convert.ToInt64(reader["id"]);
                         product.name = Convert.ToString(reader["name"]);
                         product.info = Convert.ToString(reader["info"]);
                         product.pic = String.Format(Convert.ToString(reader["pic"]) + "{0}", formatname);
