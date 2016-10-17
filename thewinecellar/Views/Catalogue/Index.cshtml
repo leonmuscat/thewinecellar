@@ -1,6 +1,8 @@
 ﻿
 @Scripts.Render("~/bundles/cart")
 
+
+
 @foreach (var product in ViewBag.ProductList)
 {
     <div id="@(product.id)" class="product_box">
@@ -12,6 +14,8 @@
         <a href="productdetail_1.html" class="detail">DETAIL</a>
     </div>
 }
+
+<p>@ViewBag.LoggedInUser</p>
 
 
 

@@ -31,7 +31,7 @@ namespace DataLayer
         {
             platform_user platformUser = new platform_user();
             connection.Open();
-            SqlCommand queryPlatformUser = new SqlCommand(String.Format("SELECT * FROM platform_user WHERE email='{0}' AND surname='{1}'", email, password), connection);
+            SqlCommand queryPlatformUser = new SqlCommand(String.Format("SELECT * FROM platform_user WHERE email='{0}' AND password='{1}'", email, password), connection);
             try
             {
                 using (SqlDataReader reader = queryPlatformUser.ExecuteReader())

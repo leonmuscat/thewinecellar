@@ -14,11 +14,10 @@ namespace theWineCellar.Controllers
         // GET: Catalogue
         public ActionResult Index()
         {
+            var loggedInUser = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
             var productList = connector.getCatalogue(imageFormat);
-            //string test = Convert.ToString(productList.ElementAt(0));
-            //productList.ElementAt(0).pic = VirtualPathUtility.ToAbsolute(test);
-
             ViewBag.ProductList = productList;
+            ViewBag.LoggedInUser = loggedInUser;
 
             return View();
         }
