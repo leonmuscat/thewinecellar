@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -64,11 +65,11 @@
     <Compile Include="Model\sysdiagram.cs">
       <DependentUpon>TheWineCellar.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\TheWineCellar.Context.cs">
+    <None Include="Model\TheWineCellar.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TheWineCellar.Context.tt</DependentUpon>
-    </Compile>
+    </None>
     <Compile Include="Model\TheWineCellar.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

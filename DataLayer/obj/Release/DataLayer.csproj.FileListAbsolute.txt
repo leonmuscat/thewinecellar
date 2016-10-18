@@ -1,0 +1,6 @@
+C:\Users\XPS\Documents\Visual Studio 2015\Projects\theWineCellar\DataLayer\bin\Release\DataLayer.dll.config
+C:\Users\XPS\Documents\Visual Studio 2015\Projects\theWineCellar\DataLayer\bin\Release\DataLayer.dll
+C:\Users\XPS\Documents\Visual Studio 2015\Projects\theWineCellar\DataLayer\bin\Release\DataLayer.pdb
+C:\Users\XPS\Documents\Visual Studio 2015\Projects\theWineCellar\DataLayer\obj\Release\DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\XPS\Documents\Visual Studio 2015\Projects\theWineCellar\DataLayer\obj\Release\DataLayer.dll
+C:\Users\XPS\Documents\Visual Studio 2015\Projects\theWineCellar\DataLayer\obj\Release\DataLayer.pdb
