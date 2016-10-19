@@ -11,7 +11,7 @@ namespace theWineCellar.Controllers
     {
         protected string imageFormat = ".jpg";
 
-        //Local database connection
+        //Local database connection instance
         //protected DataConnector connector = new DataConnector("Server=XPS-PC\\SQLEXPRESS;Database=TheWineCellar;User Id=sa;Password=LeonLFC71986;");
 
         //online database connection via free web hosting
